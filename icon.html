@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  
+
+@-webkit-keyframes bounce {
+    0%   {transform: translateY(0px);}
+    50% {transform: translateY(50px);}
+    100%{transform: translateY(0px);}
+}
+
+
+
+.ball{
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    background-color: blue;
+    display: inline-block;   
+    color: blue;
+}
+
+#ball_1{
+    -webkit-animation: bounce 3s linear infinite; 
+}
+#ball_2{
+    -webkit-animation: bounce 2.5s linear infinite; 
+}
+#ball_3{
+    -webkit-animation: bounce 2s linear infinite;
+}
+
+
+
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+a{
+  text-decoration:none;
+  color:#351435;
+  font-family:sans-serif;
+  font-size:40px;
+  border:3px solid #351435;
+  padding:40px 80px;
+  position: relative;
+  transition: all 1s;
+  overflow:hidden;
+  
+}
+a:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  background-color:#351435;
+  z-index:-1;
+  transform:translateX(-100%);
+  
+  transition:all 1s;
+}
+a:hover:before{
+  transform:translateX(0);
+}
+a:hover{
+  color:#fff;
+}
+</style>
+<body>
+    
+
+    <div id="background">
+        <div id="ball_1" class="ball"></div>
+        <div id="ball_2" class="ball"></div>
+        <div id="ball_3" class="ball"></div>
+      </div>
+      
+      <a href="#">HOVER ME</a>
+
+</body>
+</html>
